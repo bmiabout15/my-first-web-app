@@ -19,12 +19,17 @@
           </a>
         </div>
   
-        <!-- サイドバーにメニューを追加してください -->
-        <ul class="sidebar-menu"> 
+        <ul class="sidebar-menu">
           <li class="sidebar-menu-item tab-item" data-tab="converter">
             <span class="ri-scales-3-line"></span>
-            Unit Converter
+            <span>Unit Converter</span>
           </li>
+          <!-- メニュー項目にFlashcardsを追加してください -->
+          <li class="sidebar-menu-item tab-item" data-tab="flashcards">
+            <span class="ri-book-line"></span>
+            <span>Flashcards</span>
+          </li>
+
         </ul>
       </aside>
 
@@ -53,22 +58,59 @@
 
           </div>
         </section>
-        <!-- 単位変換機能セクション -->
+        <!-- End ホームセクション -->
+
+        <!-- 単位変換セクション -->
         <section class="content-section hidden" id="converter">
           <header class="section-header">
-            <title class="section-title">Length Unit Conversion</title>
+            <h1 class="section-title">Length Unit Conversion</h1>
           </header>
           <div class="section-body">
-            <form class="converter-form">
-              <input class="converter-input" type="number" value="1000">
-              <select class="converter-from"></select>
-              <select class="converter-to"></select>
-              <div class="converter-result"></div>
-            </form>
+            <div class="converter-card">
+              <form class="converter-form">
+                <div class="form-group">
+                  <label class="form-label">Length Unit Conversion</label>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Value</label>
+                  <input
+                    type="number"
+                    class="form-input converter-input"
+                    value="1000"
+                    step="any"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">From</label>
+                    <select class="form-input converter-from"></select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">To</label>
+                    <select class="form-input converter-to"></select>
+                  </div>
+                </div>
+                <div class="converter-result-container">
+                  <div class="converter-result"></div>
+                </div>
+              </form>
+            </div>
           </div>
         </section>
+        <!-- End 単位変換セクション -->
+        <!-- 暗記カードセクション -->
+        <section class="content-section hidden" id="flashcards">
+          <header class="section-header">
+            <h1 class="section-title">Flashcards</h1>
+          </header>
+          <div class="section-body">
+            <!-- 暗記カードのコンテンツを追加してください -->
+            <div id="flashcards-list"></div>
+          </div>
+        </section>
+        <!-- End 暗記カードセクション -->
       </main>
     </div>
-    <script src="main.js" type="module"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
